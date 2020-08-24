@@ -1,3 +1,8 @@
+__author__ = "Otto van der Himst"
+__credits__ = "Otto van der Himst, Pablo Lanillos"
+__version__ = "1.0"
+__email__ = "o.vanderhimst@student.ru.nl"
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
