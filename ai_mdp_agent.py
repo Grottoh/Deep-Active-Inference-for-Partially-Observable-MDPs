@@ -152,9 +152,9 @@ class Agent():
         # The default parameters
         default_parameters = {'run_id':"_rX", 'device':'cpu',
               'env':'CartPole-v1', 'n_episodes':5000, 
-              'n_hidden_trans':128, 'lr_trans':1e-3, 
-              'n_hidden_pol':128, 'lr_pol':1e-3, 
-              'n_hidden_val':128, 'lr_val':1e-4,
+              'n_hidden_trans':64, 'lr_trans':1e-3, 
+              'n_hidden_pol':64, 'lr_pol':1e-3, 
+              'n_hidden_val':64, 'lr_val':1e-4,
               'memory_capacity':65536, 'batch_size':64, 'freeze_period':25,
               'Beta':0.99, 'gamma':1.00, 
               'print_timer':100,

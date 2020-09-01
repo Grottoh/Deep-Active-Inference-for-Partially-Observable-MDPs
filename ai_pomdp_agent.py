@@ -179,6 +179,9 @@ class VAE(nn.Module):
                 nn.Sigmoid()
                 ).to(self.device)
         
+        print(self.conv3d_size_out)
+        sys.exit()
+        
         # Fully connected layers connected to encoder
         self.fc1 = nn.Linear(self.conv3d_size_out, self.conv3d_size_out // 2)
         self.fc2_mu = nn.Linear(self.conv3d_size_out // 2, self.n_latent_states)
@@ -294,7 +297,7 @@ class Agent():
         # The default parameters
         default_parameters = {'run_id':"_rX", 'device':'cuda',
               'env':'CartPole-v1', 'n_episodes':5000, 
-              'n_screens':4, 'n_latent_states':32, 'lr_vae':1e-5, 'vae_loss_divider':25000,
+              'n_screens':4, 'n_latent_states':32, 'lr_vae':1e-5, 'alpha':25000,
               'n_hidden_trans':64, 'lr_trans':1e-3,
               'n_hidden_pol':64, 'lr_pol':1e-3,
               'n_hidden_val':64, 'lr_val':1e-4,
@@ -344,7 +347,7 @@ class Agent():
         self.n_screens = int(custom_parameters['n_screens']) # The number of obervations (screens) that are passed to the VAE
         self.n_latent_states = int(custom_parameters['n_latent_states'])
         self.lr_vae = float(custom_parameters['lr_vae'])
-        self.vae_loss_divider = int(custom_parameters['vae_loss_divider']) # Used to scale down the VAE's loss
+        self.alpha = int(custom_parameters['alpha']) # Used to scale down the VAE's loss
         self.n_hidden_trans = int(custom_parameters['n_hidden_trans'])
         self.lr_trans = float(custom_parameters['lr_trans'])
         self.n_hidden_val = int(custom_parameters['n_hidden_val'])
@@ -553,7 +556,7 @@ class Agent():
         
         # Determine the reconstruction loss for time t1
         recon_batch = self.vae.decode(z_batch_t1, self.batch_size)
-        vae_loss = self.vae.loss_function(recon_batch, obs_batch_t1, state_mu_batch_t1, state_logvar_batch_t1, batch=True) / self.vae_loss_divider
+        vae_loss = self.vae.loss_function(recon_batch, obs_batch_t1, state_mu_batch_t1, state_logvar_batch_t1, batch=True) / self.alpha
         
         # Compute the value network loss:
         value_net_loss = self.compute_value_net_loss(state_batch_t1, state_batch_t2,
