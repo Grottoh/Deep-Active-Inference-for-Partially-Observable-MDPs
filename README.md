@@ -13,14 +13,14 @@ The code contains implementations of an:
 
 Use the following command line argument to run an (active inference POMDP) agent with the default parameters (the default being the parameters used in [1]):
 
-'''
+```
 	python ai_pomdp_agent.py
-'''
+```
 
 Specify custom parameters like:
 
-'''
+```
 	python ai_pomdp_agent.py device=cuda:0 load_pre_trained_vae=False pre_train_vae=True
-'''
+```
 
-Each implementation contains a function '''set_parameters''' where its parameters are listed and described.
+Each implementation contains a function ```set_parameters``` where its parameters are listed and described via comments.
