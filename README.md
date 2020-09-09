@@ -23,4 +23,4 @@ Specify custom parameters like:
 	python ai_pomdp_agent.py device=cuda:0 load_pre_trained_vae=False pre_train_vae=True
 ```
 
-Each implementation contains a function ```set_parameters``` where its parameters are listed and described via comments.
+Each implementation contains a function ```set_parameters(...)``` where its parameters are listed and described via comments.
