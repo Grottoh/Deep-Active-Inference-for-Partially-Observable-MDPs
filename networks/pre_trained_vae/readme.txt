@@ -1,0 +1,1 @@
+By default ai_pomdp_agent.py saves pre-trained VAEs here, X in _nX_ refers to the size of the VAE latent space.
