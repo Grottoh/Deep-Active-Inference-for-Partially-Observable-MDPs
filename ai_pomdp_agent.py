@@ -179,9 +179,6 @@ class VAE(nn.Module):
                 nn.Sigmoid()
                 ).to(self.device)
         
-        print(self.conv3d_size_out)
-        sys.exit()
-        
         # Fully connected layers connected to encoder
         self.fc1 = nn.Linear(self.conv3d_size_out, self.conv3d_size_out // 2)
         self.fc2_mu = nn.Linear(self.conv3d_size_out // 2, self.n_latent_states)

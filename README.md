@@ -16,6 +16,8 @@ Use the following command line argument to run an (active inference POMDP) agent
 ```
 	python ai_pomdp_agent.py
 ```
+Note that when using the default parameters, the folders *logs*, *networks*, *results* and their subfolders are required,
+ these folders may be empty (except when running default *ai_pomdp_agent.py*, which requires a network stored in the *pre_trained_vae* folder).
 
 Specify custom parameters like:
 
