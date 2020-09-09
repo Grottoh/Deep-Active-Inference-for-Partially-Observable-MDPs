@@ -1,6 +1,6 @@
 # Deep Active Inference for Partially Observable MDPs
 
-This repository contains the code for the algorithms described in:
+This repository contains the code and results for the algorithms described in:
 
 [1] Himst, O., & Lanillos, P. (2020) Deep Active Inference for Partially Observable MDPs. arXiv preprint arXiv:2009.03622.
 
