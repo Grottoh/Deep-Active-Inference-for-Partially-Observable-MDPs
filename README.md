@@ -26,3 +26,5 @@ Specify custom parameters like:
 ```
 
 Each implementation contains a function ```set_parameters(...)``` where its parameters are listed and described.
+
+The agents were tested on the OpenAI gym's CartPole-v1 task. The MDP agents are able to do a variety of other (classic control) tasks, but at present the POMDP agents are restricted to the CartPole environment.
