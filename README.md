@@ -1,8 +1,8 @@
 # Deep Active Inference for Partially Observable MDPs
 
-This repository contains the code and results for the algorithms described in https://arxiv.org/abs/2009.03622 <sup>[1]</sup>:
+This repository contains the code and results for the algorithms published in the In International Workshop on Active Inference jointly with the European Conference on Machine Learning: https://link.springer.com/chapter/10.1007/978-3-030-64919-7_8 Preprint: https://arxiv.org/abs/2009.03622
 
-[1] Himst, O., & Lanillos, P. (2020) Deep Active Inference for Partially Observable MDPs. arXiv preprint arXiv:2009.03622.
+Citation: van der Himst, O., & Lanillos, P. (2020, September). Deep Active Inference for Partially Observable MDPs. In International Workshop on Active Inference (pp. 61-71). Springer, Cham.
 
 ## Usage
 The code contains implementations of an:
